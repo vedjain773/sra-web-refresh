@@ -11,9 +11,11 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 0 1em;
+    transition: opacity 1s linear;
     img {
       margin: 1.5em;
-      width: 150px;
+      height: 150px;
+      width: auto;
       transition: transform 0.2s;
       &:hover {
         transform: scale(1.1);
@@ -25,4 +27,12 @@
       }
     }
   }
+}
+
+.fade {
+  opacity: 1;
+}
+
+.noFade {
+  opacity: 0;
 }
