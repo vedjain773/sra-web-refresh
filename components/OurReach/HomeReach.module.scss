@@ -24,15 +24,20 @@
       @media (max-width: 650px) {
         margin: 0.5em;
         width: 100px;
+        height: auto;
       }
     }
   }
 }
 
-.fade {
-  opacity: 1;
+.btnGrp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
-.noFade {
-  opacity: 0;
+.btn {
+  cursor: pointer;
 }
