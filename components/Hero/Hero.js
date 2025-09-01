@@ -20,39 +20,36 @@ function Hero({
     <>
       <div
         style={{
-          backgroundImage: `linear-gradient(
-                            to bottom,
-                            rgba(0, 0, 0, 0.5),
-                            rgba(0, 0, 0, 0.5),
-                            rgba(0, 0, 0, 0.5)), url("/static/images/hero/${imgName}")`,
-          backgroundPosition: backgroundPosition,
+          '--hero-bg-image': `url("/static/images/hero/${imgName}")`,
         }}
         className={styles.hero}
       >
-        <div className={styles.heroHead}>{title}</div>
-        <div className={styles.heroSub}>
-          {subtitleList.map((heroTag, index) => {
-            return subtitleList.length !== index + 1 ? (
-              <span key={`hero_${index}`}>
-                {heroTag}&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-              </span>
-            ) : (
-              <span key={`hero_${index}`}>{heroTag}</span>
-            );
-          })}
-        </div>
-        <a href='#is'>
-          <div className={styles.scrollIndicator}></div>
-        </a>
-        {isHome && (
-          <a
-            href='#notifs'
-            className={styles.notif}
-            style={{ display: isLoad }}
-          >
-            <FontAwesomeIcon icon={faBell} />
+        <div className={styles.heroContent}>
+          <div className={styles.heroHead}>{title}</div>
+          <div className={styles.heroSub}>
+            {subtitleList.map((heroTag, index) => {
+              return subtitleList.length !== index + 1 ? (
+                <span key={`hero_${index}`}>
+                  {heroTag}&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                </span>
+              ) : (
+                <span key={`hero_${index}`}>{heroTag}</span>
+              );
+            })}
+          </div>
+          <a href='#is'>
+            <div className={styles.scrollIndicator}></div>
           </a>
-        )}
+          {isHome && (
+            <a
+              href='#notifs'
+              className={styles.notif}
+              style={{ display: isLoad }}
+            >
+              <FontAwesomeIcon icon={faBell} />
+            </a>
+          )}
+        </div>
       </div>
       {isHome && (
         <div className={styles.is} id='is'>
