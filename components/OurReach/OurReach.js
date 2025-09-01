@@ -1,8 +1,12 @@
 import { AlumniReachImgNames, AlumniReachLinks } from '../../data';
 import styles from './HomeReach.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
-import { faArrowLeft, faCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faArrowLeft,
+  faCircle,
+  faArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
+import { useState, useEffect } from 'react';
 
 const OurReach = () => {
   let groups = [];
@@ -46,6 +50,16 @@ const OurReach = () => {
     setCurrentIndex(num);
   }
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % groups.length);
+      }, 1000);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [groups.length]);
+
   return (
     <>
       <div className={styles.reach}>
@@ -67,13 +81,27 @@ const OurReach = () => {
         </div>
 
         <div className={styles.btnGrp}>
-          <FontAwesomeIcon icon={faArrowLeft} size='lg' className={styles.btn} onClick={handleLeft} />
+          <FontAwesomeIcon
+            icon={faArrowLeft}
+            size='lg'
+            className={styles.btn}
+            onClick={handleLeft}
+          />
           {groups.map((group, idx) => {
             return (
-              <FontAwesomeIcon icon={faCircle} size={currentIndex == idx ? 'sm' : '2xs'} onClick={() => handleCircle(idx)} />
+              <FontAwesomeIcon
+                icon={faCircle}
+                size={currentIndex == idx ? 'sm' : '2xs'}
+                onClick={() => handleCircle(idx)}
+              />
             );
           })}
-          <FontAwesomeIcon icon={faArrowRight} size='lg' className={styles.btn} onClick={handleRight} />
+          <FontAwesomeIcon
+            icon={faArrowRight}
+            size='lg'
+            className={styles.btn}
+            onClick={handleRight}
+          />
         </div>
       </div>
     </>
