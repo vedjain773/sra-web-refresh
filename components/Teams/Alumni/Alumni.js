@@ -51,7 +51,6 @@ const Alumni = () => {
 
   const selKeyword = (ev) => {
     const value = ev.currentTarget.value.toLowerCase();
-    setFilYear('Show all');
     setKey(value);
 
     if (value != '') {
@@ -62,7 +61,8 @@ const Alumni = () => {
         );
       });
     } else {
-      filteredList = filteredList;
+      setFilYear('Show all');
+      filteredList = updatedList;
     }
   };
 

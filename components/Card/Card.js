@@ -6,7 +6,10 @@ const Card = ({ index, imgName, name, sub, linkedInLink, githubLink }) => {
   return (
     <div className={styles.cont}>
       <div className={styles.top}>
-        <div className={styles.personImg} style={{backgroundImage: `url("/static/images/${imgName}")`}}></div>
+        <div
+          className={styles.personImg}
+          style={{ backgroundImage: `url("/static/images/${imgName}")` }}
+        ></div>
       </div>
       <div className={styles.txtCont}>
         <div className={styles.name}>{name}</div>
