@@ -61,4 +61,9 @@
       color: #f5f5f5;
     }
   }
+
+  @media (max-width: 650px) {
+    width: 80%;
+    margin: 0 auto;
+  }
 }

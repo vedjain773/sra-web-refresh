@@ -59,6 +59,10 @@
       }
     }
   }
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
 }
 
 .cardGrp {
@@ -66,6 +70,10 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
   padding: 2rem;
+
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .selYear {
