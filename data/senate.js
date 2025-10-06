@@ -157,7 +157,7 @@ const SenateList = [
     githubLink: 'https://github.com/5usu',
   },
   {
-    name: 'Aaditya Joil(jojo)',
+    name: 'Aaditya Joil (JOJO)',
     imgName: '',
     sub: (
       <>
@@ -178,21 +178,8 @@ const SenateList = [
         B.Tech Electronics and Telecommunication ' 27
       </>
     ),
-    linkedInLink: '',
-    githubLink: '',
-  },
-  {
-    name: 'Sarvesh Ganu',
-    imgName: '',
-    sub: (
-      <>
-        TY Core
-        <br />
-        B.Tech  ' 27
-      </>
-    ),
-    linkedInLink: 'https://in.linkedin.com/in/sarvesh-ganu',
-    githubLink: 'https://github.com/MrCheese260',
+    linkedInLink: 'https://in.linkedin.com/in/prithvi-tambewagh',
+    githubLink: 'https://github.com/rkt-1597',
   },
   {
     name: 'Rakshitha Kowlikar',
@@ -232,32 +219,6 @@ const SenateList = [
     ),
     linkedInLink: 'https://in.linkedin.com/in/kesar-suthar-70a134281',
     githubLink: 'https://github.com/KesarParmar',
-  },
-  {
-    name: 'Akash Kawle',
-    imgName: '',
-    sub: (
-      <>
-        TY Core
-        <br />
-        B.Tech Electronics and Telecommunication ' 27
-      </>
-    ),
-    linkedInLink: 'https://in.linkedin.com/in/akashkawle',
-    githubLink: 'https://github.com/shinymack',
-  },
-  {
-    name: 'Swanand Patil',
-    imgName: '',
-    sub: (
-      <>
-        TY Core
-        <br />
-        B.Tech Electronics ' 27
-      </>
-    ),
-    linkedInLink: '',
-    githubLink: '',
   },
   {
     name: 'Shaurya Rane',
