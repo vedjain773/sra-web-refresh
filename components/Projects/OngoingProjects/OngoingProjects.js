@@ -2,7 +2,7 @@ import styles from './OngoingProjects.module.scss';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { OngoingProjectsData } from '../../../data';
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons'; // Removed unused faLinkedinIn
 import Hero from '../../Hero/Hero';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -52,7 +52,7 @@ const OngoingProjects = () => {
                     }}
                   />
                   <div className={styles.projectImageFallback} style={{display: 'none'}}>
-                    <span>🔄</span>
+                    <span>...</span> {/* Replaced emoji */}
                   </div>
                 </div>
                 <div className={styles.projectContent}>
@@ -120,7 +120,7 @@ const OngoingProjects = () => {
                         }}
                       />
                       <div className={styles.modalImageFallback} style={{display: 'none'}}>
-                        <span>🔄</span>
+                        <span>...</span> {/* Replaced emoji */}
                         <p>Image not available</p>
                       </div>
                     </div>
@@ -150,7 +150,5 @@ const OngoingProjects = () => {
     </>
   );
 };
-
-// OngoingProjectCard component removed - now using card layout directly in main component
 
 export default OngoingProjects;

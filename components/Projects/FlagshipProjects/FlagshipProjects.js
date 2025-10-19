@@ -51,7 +51,7 @@ const FlagshipProjects = () => {
                     }}
                   />
                   <div className={styles.projectImageFallback} style={{display: 'none'}}>
-                    <span>📁</span>
+                    <span>...</span> {/* Replaced emoji */}
                   </div>
                 </div>
                 <div className={styles.projectContent}>
@@ -119,7 +119,7 @@ const FlagshipProjects = () => {
                       }}
                     />
                     <div className={styles.modalImageFallback} style={{display: 'none'}}>
-                      <span>📁</span>
+                      <span>...</span> {/* Replaced emoji */}
                       <p>Image not available</p>
                     </div>
                   </div>

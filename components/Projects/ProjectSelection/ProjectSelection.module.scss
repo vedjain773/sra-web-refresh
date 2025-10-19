@@ -1,9 +1,10 @@
 @import '../../variables';
 
-//michroma font
-@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+//orbitron font
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&display=swap');
 
 .container {
+  font-family: 'Orbitron', sans-serif; // Set global font for component
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -61,7 +62,7 @@
   white-space: nowrap;
   margin: 0;
   color: white;
-  font-family: 'Michroma', sans-serif;
+  // font-family removed, inherits from .container
 }
 
 .subtitle {
@@ -101,15 +102,19 @@
 
   &:hover {
     transform: translateY(-12px); 
-    box-shadow: 0 15px 35px rgba(255, 77, 77, 0.3);
-    border-color: #ff4d4d;
+    // Changed from orange/red to purple
+    // The RGB for #892cdc is 137, 44, 220
+    box-shadow: 0 15px 35px rgba(137, 44, 220, 0.3);
+    border-color: #892cdc;
   }
 }
 
-.cardIcon {
+/* .cardIcon {
   font-size: 2rem;
   margin-bottom: 1rem;
-}
+} 
+*/
+// .cardIcon rule removed
 
 .cardContent {
   z-index: 2;

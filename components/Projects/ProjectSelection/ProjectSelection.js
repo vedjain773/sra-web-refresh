@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import styles from './ProjectSelection.module.scss';
 import Head from 'next/head';
-import { useState } from 'react';
 
 const ProjectSelection = () => {
   const categories = [
@@ -10,7 +9,7 @@ const ProjectSelection = () => {
       name: 'Ongoing Projects',
       slug: 'ongoing',
       description: 'Current active projects in development',
-      icon: '🚀',
+      // icon: '🚀', // Removed
       count: 3
     },
     {
@@ -18,7 +17,7 @@ const ProjectSelection = () => {
       name: 'Flagship Projects',
       slug: 'flagship', 
       description: 'Our most innovative and impactful projects',
-      icon: '⭐',
+      // icon: '⭐', // Removed
       count: 3
     },
     {
@@ -26,7 +25,7 @@ const ProjectSelection = () => {
       name: 'Eklavya Projects',
       slug: 'eklavya',
       description: 'Annual learning initiative projects by year',
-      icon: '🎓',
+      // icon: '🎓', // Removed
       count: '2017-2024'
     },
   ];
@@ -54,9 +53,7 @@ const ProjectSelection = () => {
                 href={`/projects/${category.slug}`} 
                 className={styles.card}
               >
-                <div className={styles.cardIcon}>
-                  {category.icon}
-                </div>
+                {/* Removed the cardIcon div block */}
                 <div className={styles.cardContent}>
                   <h3 className={styles.cardTitle}>{category.name}</h3>
                   <p className={styles.cardDescription}>{category.description}</p>

@@ -1,10 +1,12 @@
 @import '../../variables';
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;500;600&display=swap');
 
 .container {
   min-height: 100vh;
   background: transparent;
   color: #ffffff;
   padding: 40px;
+  font-family: 'Tomorrow', sans-serif; // Set base font for descriptive text
   
   @media (max-width: 768px) {
     padding: 20px;
@@ -22,10 +24,11 @@
 
 .sectionTitle {
   font-size: 3.5rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Orbitron', sans-serif; // Title font
   font-weight: 700;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #ffffff 0%, #ff4d4d 50%, #ff8c42 100%);
+  // Changed gradient to purple
+  background: linear-gradient(135deg, #ffffff 0%, #892cdc 50%, #892cdc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -56,7 +59,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(135deg, #ff4d4d, #ff8c42);
+  background: #892cdc; // Changed to purple
   color: white;
   text-decoration: none;
   padding: 12px 24px;
@@ -66,7 +69,8 @@
   
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 77, 77, 0.3);
+    // Changed to purple. RGB for #892cdc is 137, 44, 220
+    box-shadow: 0 8px 25px rgba(137, 44, 220, 0.3);
     color: white;
   }
   
@@ -80,7 +84,7 @@
     font-size: 1.3rem;
     color: #ffffff;
     margin-bottom: 15px;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Orbitron', sans-serif; // Title font
   }
 }
 
@@ -121,15 +125,16 @@
 .projectYear {
   text-align: center;
   padding: 15px;
-  background: rgba(255, 77, 77, 0.1);
-  border: 1px solid rgba(255, 77, 77, 0.3);
+  // Changed to purple theme
+  background: rgba(137, 44, 220, 0.2);
+  border: 1px solid rgba(137, 44, 220, 0.3);
   border-radius: 10px;
   
   span {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #ff4d4d;
-    font-family: 'Orbitron', sans-serif;
+    color: #892cdc; // Changed to purple
+    font-family: 'Orbitron', sans-serif; // Title font
   }
 }
 
@@ -156,7 +161,7 @@
 
 .modalTitle {
   font-size: 2.5rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Orbitron', sans-serif; // Title font
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 25px;
@@ -180,7 +185,7 @@
 }
 
 .backButton {
-  background: linear-gradient(135deg, #ff4d4d, #ff8c42);
+  background: #892cdc; // Changed to purple
   border: none;
   color: white;
   padding: 12px 24px;
@@ -193,7 +198,7 @@
   
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 77, 77, 0.3);
+    box-shadow: 0 8px 25px rgba(137, 44, 220, 0.3); // Changed to purple
   }
 }
 
@@ -228,17 +233,17 @@
   
   &:hover {
     transform: translateY(-8px);
-    border-color: rgba(255, 77, 77, 0.5);
-    box-shadow: 0 15px 35px rgba(255, 77, 77, 0.2);
+    border-color: rgba(137, 44, 220, 0.5); // Changed to purple
+    box-shadow: 0 15px 35px rgba(137, 44, 220, 0.2); // Changed to purple
     
     .yearNumber {
-      color: #ff4d4d;
+      color: #892cdc; // Changed to purple
       transform: scale(1.1);
     }
     
     .yearArrow {
       transform: translateX(8px);
-      color: #ff8c42;
+      color: #892cdc; // Changed to purple
     }
   }
   
@@ -249,7 +254,7 @@
 
 .yearNumber {
   font-size: 2.5rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Orbitron', sans-serif; // Title font
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 10px;
@@ -299,11 +304,11 @@
   }
   
   &::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg, #ff4d4d, #ff8c42);
+    background: #892cdc; // Changed to purple
     border-radius: 4px;
     
     &:hover {
-      background: linear-gradient(90deg, #ff6666, #ffa366);
+      background: #a04ef0; // Lighter purple
     }
   }
   
@@ -325,16 +330,16 @@
   
   &:hover {
     transform: translateY(-8px);
-    border-color: rgba(255, 77, 77, 0.5);
-    box-shadow: 0 15px 35px rgba(255, 77, 77, 0.15);
+    border-color: rgba(137, 44, 220, 0.5); // Changed to purple
+    box-shadow: 0 15px 35px rgba(137, 44, 220, 0.15); // Changed to purple
     
     .projectTitle {
-      color: #ff4d4d;
+      color: #892cdc; // Changed to purple
     }
     
     .projectArrow {
       transform: translateX(8px);
-      color: #ff8c42;
+      color: #892cdc; // Changed to purple
     }
   }
   
@@ -382,7 +387,7 @@
 
 .projectTitle {
   font-size: 1.4rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Orbitron', sans-serif; // Title font
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 15px;
@@ -407,7 +412,7 @@
 
 .viewMore {
   font-size: 0.9rem;
-  color: #ff8c42;
+  color: #892cdc; // Changed to purple
   font-weight: 500;
 }
 
@@ -452,7 +457,7 @@
   }
   
   &::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg, #ff4d4d, #ff8c42);
+    background: #892cdc; // Changed to purple
     border-radius: 4px;
   }
 }
@@ -476,7 +481,7 @@
   z-index: 10;
   
   &:hover {
-    background: rgba(255, 77, 77, 0.2);
+    background: rgba(137, 44, 220, 0.2); // Changed to purple
     transform: scale(1.1);
   }
 }
