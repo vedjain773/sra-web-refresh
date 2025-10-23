@@ -6,8 +6,16 @@ $light: #5a20a6;
 $lightest: #caa4ff;
 
 :root {
-  --page-bg: radial-gradient(circle at 25% 15%, rgba(90, 32, 166, 0.18) 0%, transparent 55%),
-    radial-gradient(circle at 75% 20%, rgba(77, 123, 255, 0.18) 0%, transparent 58%),
+  --page-bg: radial-gradient(
+      circle at 25% 15%,
+      rgba(90, 32, 166, 0.18) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 75% 20%,
+      rgba(77, 123, 255, 0.18) 0%,
+      transparent 58%
+    ),
     linear-gradient(180deg, #04020a 0%, #0a0518 50%, #110a25 100%);
   --page-bg-solid: #0a0518;
   --surface-paper: rgba(18, 15, 32, 0.78);
