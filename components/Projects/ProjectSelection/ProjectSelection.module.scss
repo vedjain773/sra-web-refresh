@@ -1,51 +1,157 @@
-.projSelect {
-  width: 100%;
-  height: 100vh;
-  // overflow: auto;
+@import '../../variables';
 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('/static/images/hero/proj-selection-hero.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+//orbitron font
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&display=swap');
+
+.container {
+  font-family: 'Orbitron', sans-serif; // Set global font for component
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  //gradient image 
+  background-image: url('/static/images/hero/projectselection-hero.jpg');
+  background-size: 200% 200%;
   background-position: center;
+  position: relative;
+  overflow: hidden;
+  animation: flow 20s ease-in-out infinite;
+}
 
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 0;
+}
+
+//background effect for flowing animation
+@keyframes flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 6rem 2rem 4rem;
+  position: relative;
+  z-index: 1; 
+}
+
+.headerContent {
   text-align: center;
-  h1 {
-    font-size: 5rem;
-    font-family: 'Oswald', sans-serif;
-    padding-top: 1.5em;
+}
 
-    @media (max-width: 550px) {
-      font-size: 3rem;
-      padding-top: 2em;
-    }
+.titleCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  display: inline-block;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  white-space: nowrap;
+  margin: 0;
+  color: white;
+  // font-family removed, inherits from .container
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cardsWrapper {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-12px); 
+    // Changed from orange/red to purple
+    // The RGB for #892cdc is 137, 44, 220
+    box-shadow: 0 15px 35px rgba(137, 44, 220, 0.3);
+    border-color: #892cdc;
   }
+}
 
-  .projSelList {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3em;
+/* .cardIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+} 
+*/
+// .cardIcon rule removed
 
-    .link {
-      font-size: 2rem;
-      border: 2px solid white;
-      border-radius: 2px;
-      padding: 0.5em 1em;
-      margin: 1em;
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.164);
-      }
-    }
+.cardContent {
+  z-index: 2;
+  position: relative;
+}
 
-    @media (max-width: 1000px) {
-      .link {
-        font-size: 1.5rem;
-      }
-    }
+.cardTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
 
-    @media (max-width: 675px) {
-      flex-direction: column;
-    }
-  }
+.cardDescription {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.cardGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
 }
