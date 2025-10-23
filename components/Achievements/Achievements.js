@@ -9,7 +9,9 @@ const Achievements = () => {
   useEffect(() => {
     // Cleanup timeouts on unmount
     return () => {
-      Object.values(hoverTimeouts.current).forEach(timeout => clearTimeout(timeout));
+      Object.values(hoverTimeouts.current).forEach((timeout) =>
+        clearTimeout(timeout)
+      );
     };
   }, []);
 
@@ -18,7 +20,7 @@ const Achievements = () => {
     const timeoutId = setTimeout(() => {
       card.classList.add(styles.showDetail);
     }, 800); // 800ms delay before showing detail
-    
+
     hoverTimeouts.current[achIndex] = timeoutId;
   };
 
@@ -52,8 +54,8 @@ const Achievements = () => {
                 {achYear.achs.map((ach, achIdx) => {
                   const uniqueIndex = `${yearIdx}-${achIdx}`;
                   return (
-                    <div 
-                      className={styles.ach} 
+                    <div
+                      className={styles.ach}
                       key={`achievement_${achIdx}`}
                       onMouseEnter={(e) => handleMouseEnter(e, uniqueIndex)}
                       onMouseLeave={(e) => handleMouseLeave(e, uniqueIndex)}

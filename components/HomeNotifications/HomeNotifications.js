@@ -30,7 +30,11 @@ const HomeNotifications = () => {
 
   return (
     <>
-      <div className={`${styles.notifs} ${styles.hidden}`} id='notifs' ref={notifsRef}>
+      <div
+        className={`${styles.notifs} ${styles.hidden}`}
+        id='notifs'
+        ref={notifsRef}
+      >
         <h1>Notifications</h1>
         <div className={styles.notifsMain}>
           {NotificationData.map((notif, idx) => {

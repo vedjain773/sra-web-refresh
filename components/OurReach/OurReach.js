@@ -97,7 +97,11 @@ const OurReach = () => {
           })}
         </div>
 
-        <div className={styles.btnGrp} role='toolbar' aria-label='University reach navigation'>
+        <div
+          className={styles.btnGrp}
+          role='toolbar'
+          aria-label='University reach navigation'
+        >
           <button
             type='button'
             className={styles.navBtn}

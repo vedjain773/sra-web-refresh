@@ -42,7 +42,11 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, rgba(90, 32, 166, 0.25), rgba(77, 123, 255, 0.18));
+    background: linear-gradient(
+      120deg,
+      rgba(90, 32, 166, 0.25),
+      rgba(77, 123, 255, 0.18)
+    );
     opacity: 0;
     transition: opacity 0.5s ease;
   }

@@ -37,7 +37,11 @@ const HomeAboutUs = () => {
 
   return (
     <>
-      <div className={`${styles.aboutUs} ${styles.hidden}`} id='About-us' ref={aboutUsRef}>
+      <div
+        className={`${styles.aboutUs} ${styles.hidden}`}
+        id='About-us'
+        ref={aboutUsRef}
+      >
         <div className={styles.aboutUsMain}>
           <h1>About Us</h1>
           <p>{AboutUsText}</p>
