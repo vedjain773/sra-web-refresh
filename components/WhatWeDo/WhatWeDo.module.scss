@@ -1,0 +1,64 @@
+.whatWeDo {
+  padding: 5rem 2rem;
+  background-color: #000;
+  text-align: center;
+  color: #ccc;
+}
+
+.whatWeDo h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+.whatWeDoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.whatWeDoItem {
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.whatWeDoItem h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.whatWeDoItem p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .whatWeDoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

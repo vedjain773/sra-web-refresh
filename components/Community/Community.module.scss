@@ -1,0 +1,57 @@
+.community {
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #ccc;
+}
+
+.community h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+.communityGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.communityItem {
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.communityItem p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .communityGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

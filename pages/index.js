@@ -3,7 +3,6 @@ import HomeAboutUs from '../components/HomeAboutUs/HomeAboutUs';
 import OurReach from '../components/OurReach/OurReach';
 import OurSponsors from '../components/OurSponsors/OurSponsors';
 import OurCorporates from '../components/OurCorporates/OurCorporates';
-import HomeNotifications from '../components/HomeNotifications/HomeNotifications';
 import { HeroTags } from '../data';
 import Head from 'next/head';
 
@@ -15,15 +14,6 @@ const Home = () => {
       </Head>
       <Hero
         imgName={'landing-hero.jpg'}
-        title={
-          <>
-            Society of
-            <br />
-            Robotics and
-            <br />
-            Automation, VJTI
-          </>
-        }
         subtitleList={HeroTags}
         isHome={true}
       />
@@ -31,7 +21,6 @@ const Home = () => {
       <OurSponsors />
       <OurReach />
       <OurCorporates />
-      <HomeNotifications />
     </>
   );
 };
