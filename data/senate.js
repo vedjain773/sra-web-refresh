@@ -8,8 +8,7 @@ const SenateList = [
         B.Tech Textile ' 27
       </>
     ),
-    linkedInLink:
-      'https://in.linkedin.com/in/ansh-semwal-830a8427a',
+    linkedInLink: 'https://in.linkedin.com/in/ansh-semwal-830a8427a',
     githubLink: 'https://github.com/De-funkd',
   },
   {
@@ -33,7 +32,8 @@ const SenateList = [
         B.Tech Textile ' 27
       </>
     ),
-    linkedInLink: 'https://in.linkedin.com/in/atharva-kshirsagar-9b12941b0?trk=people-guest_people_search-card',
+    linkedInLink:
+      'https://in.linkedin.com/in/atharva-kshirsagar-9b12941b0?trk=people-guest_people_search-card',
     githubLink: 'https://github.com/vovw',
   },
   {
@@ -57,7 +57,8 @@ const SenateList = [
         B.Tech Electrical ' 27
       </>
     ),
-    linkedInLink: 'https://in.linkedin.com/in/suchit-g-00b470285?trk=public_post-text',
+    linkedInLink:
+      'https://in.linkedin.com/in/suchit-g-00b470285?trk=public_post-text',
     githubLink: 'https://github.com/IamLegend509',
   },
   {
@@ -69,7 +70,8 @@ const SenateList = [
         B.Tech Electronics ' 27
       </>
     ),
-    linkedInLink: 'https://in.linkedin.com/in/yash-suthar-00a432341?trk=public_post-text',
+    linkedInLink:
+      'https://in.linkedin.com/in/yash-suthar-00a432341?trk=public_post-text',
     githubLink: '',
   },
   {
@@ -105,7 +107,8 @@ const SenateList = [
         B.Tech Electrical ' 27
       </>
     ),
-    linkedInLink: 'https://in.linkedin.com/in/kartikey-pathak-a365a8281?trk=public_post-text',
+    linkedInLink:
+      'https://in.linkedin.com/in/kartikey-pathak-a365a8281?trk=public_post-text',
     githubLink: 'https://github.com/NoobMaster-version',
   },
   {
@@ -129,7 +132,8 @@ const SenateList = [
         B.Tech Electrical ' 27
       </>
     ),
-    linkedInLink: 'https://in.linkedin.com/in/shri-vishakh-devanand?trk=public_post-text',
+    linkedInLink:
+      'https://in.linkedin.com/in/shri-vishakh-devanand?trk=public_post-text',
     githubLink: 'https://github.com/5iri',
   },
   {
@@ -141,7 +145,8 @@ const SenateList = [
         B.Tech Electrical ' 27
       </>
     ),
-    linkedInLink: 'https://in.linkedin.com/in/prajwal-avhad-vjti?trk=public_post-text',
+    linkedInLink:
+      'https://in.linkedin.com/in/prajwal-avhad-vjti?trk=public_post-text',
     githubLink: 'https://github.com/crisiumnih',
   },
   {
@@ -165,7 +170,8 @@ const SenateList = [
         B.Tech IT ' 27
       </>
     ),
-    linkedInLink: 'https://in.linkedin.com/in/aaditya-j-971160336?trk=public_post-text',
+    linkedInLink:
+      'https://in.linkedin.com/in/aaditya-j-971160336?trk=public_post-text',
     githubLink: 'https://github.com/JaytidaA',
   },
   {

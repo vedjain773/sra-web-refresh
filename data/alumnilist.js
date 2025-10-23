@@ -113,7 +113,8 @@ const AlumniList = [
         name: 'Alqama Shaikh',
         imgName: 'Team/2025/Alqama_Shaikh_25.jpeg',
         sub: "B.Tech Mechanical ' 25",
-        linkedInLink: 'https://www.linkedin.com/in/mohd-alqama-shaikh-636587229/',
+        linkedInLink:
+          'https://www.linkedin.com/in/mohd-alqama-shaikh-636587229/',
         githubLink: 'https://github.com/aPR0T0',
       },
       {
@@ -158,7 +159,7 @@ const AlumniList = [
         linkedInLink: 'https://www.linkedin.com/in/aryan-karawale-54b6b7233/',
         githubLink: 'https://github.com/Aryan-karawale',
       },
-    ]
+    ],
   },
   {
     year: '2024',
