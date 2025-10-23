@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="36" viewBox="0 0 120 36">
+  <rect width="120" height="36" fill="none"/>
+  <text
+    x="0"
+    y="26"
+    fill="#ffffff"
+    font-family="'Space Grotesk','Inter','Helvetica Neue',Arial,sans-serif"
+    font-weight="700"
+    font-size="28"
+    letter-spacing="6"
+  >
+    SRA
+  </text>
+</svg>

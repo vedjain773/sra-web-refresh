@@ -1,60 +1,86 @@
-@import '../variables';
+@import '../_variables';
 
 .notifs {
-  width: 100%;
-  min-height: 50vh;
-  width: 80%;
-  margin: auto;
-  padding: 3em;
+  padding: clamp(4.5rem, 12vh, 7rem) clamp(1.5rem, 8vw, 5.5rem);
+  text-align: center;
+  display: grid;
+  gap: clamp(2rem, 6vw, 3rem);
 
-  font-family: sans-serif;
   h1 {
-    font-size: 2.5rem;
-    padding-bottom: 5px;
-    border-bottom: 5px solid $light;
-    border-bottom-left-radius: 20px;
-    padding-left: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.25rem, 5vw, 3rem);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $text-ink;
+  }
+}
+
+.notifsMain {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.notif {
+  position: relative;
+  text-align: left;
+  font-size: clamp(1rem, 2.1vw, 1.1rem);
+  line-height: 1.75;
+  padding: clamp(1.25rem, 3.5vw, 1.75rem) clamp(1.5rem, 4vw, 2.3rem);
+  border-radius: clamp(1.25rem, 3vw, 1.75rem);
+  background: $surface-paper;
+  border: 1px solid $surface-border;
+  color: $text-muted;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 24px 65px rgba(4, 3, 12, 0.48);
+  overflow: hidden;
+  transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+    border-color 0.4s ease, box-shadow 0.5s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(90, 32, 166, 0.25), rgba(77, 123, 255, 0.18));
+    opacity: 0;
+    transition: opacity 0.5s ease;
   }
 
-  .notifsMain {
-    width: 100%;
-    .notif {
-      font-size: 1.1rem;
-      border-bottom: 3px solid $lightest;
-      border-left: 2px solid $lightest;
-      padding: 22px;
-      padding-left: 1.5em;
-      border-radius: 30px;
-      border-bottom-right-radius: 0px;
-      transition: transform 0.2s;
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.28);
+    box-shadow: 0 30px 72px rgba(4, 3, 12, 0.58);
 
-      &:hover {
-        transform: translateX(1%);
-      }
+    &::before {
+      opacity: 1;
     }
   }
+}
 
-  @media (max-width: 650px) {
-    width: 100%;
-    h1 {
-      font-size: 1.5rem;
-    }
-    .notifsMain {
-      .notif {
-        font-size: 0.9rem;
-      }
-    }
+.hidden {
+  opacity: 0;
+  transform: translateY(36px);
+}
+
+.visible {
+  animation: fadeInNotifs 1.05s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes fadeInNotifs {
+  from {
+    opacity: 0;
+    transform: translateY(36px);
   }
-  @media (max-width: 350px) {
-    width: 100%;
-    h1 {
-      font-size: 1.2rem;
-      padding-bottom: 1em;
-    }
-    .notifsMain {
-      .notif {
-        font-size: 0.8rem;
-      }
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 650px) {
+  .notifs {
+    padding: clamp(3.5rem, 14vh, 5.5rem) clamp(1.25rem, 7vw, 2rem);
   }
 }

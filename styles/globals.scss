@@ -1,12 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap');
 
-$black: #000000;
-$dark: #52057b;
-$light: #892cdc;
-$lightest: #bc6ff1;
+$black: #05040c;
+$dark: #120a2a;
+$light: #5a20a6;
+$lightest: #caa4ff;
+
+:root {
+  --page-bg: radial-gradient(circle at 25% 15%, rgba(90, 32, 166, 0.18) 0%, transparent 55%),
+    radial-gradient(circle at 75% 20%, rgba(77, 123, 255, 0.18) 0%, transparent 58%),
+    linear-gradient(180deg, #04020a 0%, #0a0518 50%, #110a25 100%);
+  --page-bg-solid: #0a0518;
+  --surface-paper: rgba(18, 15, 32, 0.78);
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --surface-border-strong: rgba(255, 255, 255, 0.16);
+  --text-ink: #f4f2ff;
+  --text-muted: rgba(222, 218, 255, 0.72);
+  --accent-blue: #4d7bff;
+  --accent-orange: #ff7a45;
+  --accent-neutral: #6b5a94;
+  color-scheme: dark;
+}
 
 // Resets
 * {
@@ -16,9 +29,13 @@ $lightest: #bc6ff1;
   outline: none;
 }
 body {
-  background-color: #000000;
-  color: white;
-  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text-ink);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  transition: background 0.6s ease, color 0.6s ease;
 }
 html {
   scroll-behavior: smooth;
@@ -26,6 +43,7 @@ html {
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease;
 }
 
 li {
@@ -37,9 +55,27 @@ button {
   border: none;
   background-color: transparent;
   color: inherit;
+  font: inherit;
+  cursor: pointer;
 }
 
 .temp {
   width: 100%;
   height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: rgba(37, 102, 242, 0.24);
+  color: var(--text-ink);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgba(37, 102, 242, 0.8);
+  outline-offset: 3px;
 }
