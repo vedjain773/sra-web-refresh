@@ -1,28 +1,50 @@
-.reach {
-  h1 {
-    margin: 50px 0 20px;
-    text-align: center;
-    font-size: 2.5rem;
-    font-family: 'Oswald', sans-serif;
-  }
-  .reachGroup {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 0 1em;
-    img {
-      margin: 1.5em;
-      width: 150px;
-      transition: transform 0.2s;
-      &:hover {
-        transform: scale(1.1);
-      }
+@import '../_variables';
 
-      @media (max-width: 650px) {
-        margin: 0.5em;
-        width: 100px;
-      }
-    }
+.reach {
+  padding: clamp(4.5rem, 12vh, 7rem) clamp(1.5rem, 8vw, 5.5rem);
+  display: grid;
+  gap: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.25rem, 5vw, 3rem);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $text-ink;
+  }
+}
+
+.reachGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: 0;
+  background: transparent;
+  border: none;
+
+  img {
+    width: clamp(110px, 16vw, 160px);
+    height: auto;
+    opacity: 0.85;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  a:focus-visible img,
+  img:hover {
+    transform: translateY(-6px) scale(1.02);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .reach {
+    padding: clamp(3.5rem, 14vh, 5.5rem) clamp(1.25rem, 6vw, 2rem);
+  }
+
+  .reachGroup {
+    padding: clamp(1.25rem, 5vw, 2rem);
   }
 }

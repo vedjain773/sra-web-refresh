@@ -1,101 +1,54 @@
 import styles from './Hero.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
+
+const fonts = ['Playfair Display', 'Space Grotesk', 'Inter'];
 
 function Hero({
   imgName,
-  title,
   subtitleList,
   isHome,
   backgroundPosition = 'center',
 }) {
-  const [isLoad, setIsLoad] = useState('none');
+  const [font, setFont] = useState('');
+  const [isReady, setIsReady] = useState(false);
+
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoad('');
-    }, 2000);
+    const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+    setFont(randomFont);
+
+    const animationFrame = requestAnimationFrame(() => setIsReady(true));
+
+    return () => {
+      cancelAnimationFrame(animationFrame);
+    };
   }, []);
+
   return (
     <>
       <div
         style={{
-          backgroundImage: `linear-gradient(
-                            to bottom,
-                            rgba(0, 0, 0, 0.5),
-                            rgba(0, 0, 0, 0.5),
-                            rgba(0, 0, 0, 0.5)), url("/static/images/hero/${imgName}")`,
+          backgroundImage: `linear-gradient(135deg, rgba(7, 5, 18, 0.42), rgba(10, 6, 24, 0.32)), url("/static/images/hero/${imgName}")`,
           backgroundPosition: backgroundPosition,
         }}
-        className={styles.hero}
+        className={`${styles.hero} ${isReady ? styles.heroReady : ''}`}
       >
-        <div className={styles.heroHead}>{title}</div>
-        <div className={styles.heroSub}>
-          {subtitleList.map((heroTag, index) => {
-            return subtitleList.length !== index + 1 ? (
-              <span key={`hero_${index}`}>
-                {heroTag}&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-              </span>
-            ) : (
-              <span key={`hero_${index}`}>{heroTag}</span>
-            );
-          })}
+        <div className={styles.heroContent}>
+          <div className={styles.heroHead} style={{ fontFamily: font }}>
+            SRA
+          </div>
+          <div className={styles.heroSub}>
+            {subtitleList.map((heroTag, index) =>
+              subtitleList.length !== index + 1 ? (
+                <span key={`hero_${index}`}>
+                  {heroTag}&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                </span>
+              ) : (
+                <span key={`hero_${index}`}>{heroTag}</span>
+              )
+            )}
+          </div>
         </div>
-        <a href='#is'>
-          <div className={styles.scrollIndicator}></div>
-        </a>
-        {isHome && (
-          <a
-            href='#notifs'
-            className={styles.notif}
-            style={{ display: isLoad }}
-          >
-            <FontAwesomeIcon icon={faBell} />
-          </a>
-        )}
       </div>
-      {isHome && (
-        <div className={styles.is} id='is'>
-          <div
-            style={{
-              backgroundImage: `linear-gradient(#00000081, #00000081),
-		url("/static/images/ideate.png")`,
-            }}
-            className={styles.caption}
-          >
-            <div className={styles.captionHead}>Ideate</div>
-            <div className={styles.captionSub}>
-              Changing the world, one solution at a time.
-            </div>
-          </div>
-          <div
-            style={{
-              backgroundImage: `linear-gradient(#00000098, #00000098),
-		url("/static/images/innovate.png")`,
-            }}
-            className={styles.caption}
-          >
-            <div className={styles.captionHead}>Innovate</div>
-            <div className={styles.captionSub}>
-              Creativity is thinking up new things. Innovation is doing new
-              things.
-            </div>
-          </div>
-          <div
-            style={{
-              backgroundImage: `linear-gradient(#00000081, #00000081),
-		url("/static/images/inspire.png")`,
-            }}
-            className={styles.caption}
-          >
-            <div className={styles.captionHead}>Inspire</div>
-            <div className={styles.captionSub}>
-              Don't inspire by being perfect, inspire by embracing your
-              imperfections.
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

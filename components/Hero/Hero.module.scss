@@ -1,184 +1,77 @@
-@import '../variables';
+@import '../_variables';
 
 .hero {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-family: 'Oswald', sans-serif;
-  .heroHead {
-    font-size: 4.6rem;
-    letter-spacing: 1px;
-    line-height: 130%;
-  }
-  .heroSub {
-    font-size: 1.5rem;
-    margin-top: 30px;
-    text-align: center;
-  }
-  @media (max-width: 650px) {
-    .heroHead {
-      font-size: 3rem;
-    }
-    .heroSub {
-      font-size: 1rem;
-    }
-  }
-  @media (max-width: 350px) {
-    .heroHead {
-      font-size: 2rem;
-    }
-    .heroSub {
-      font-size: 0.8rem;
-    }
-  }
-}
-
-.hero {
+  justify-content: center;
+  padding: clamp(4rem, 14vh, 8rem) clamp(1.5rem, 9vw, 6rem);
   background-size: cover;
   background-position: center;
-  color: white;
+  color: $text-ink;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(42px);
+  transition: opacity 0.8s ease, transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
 
-  .notif {
-    font-size: 1.5rem;
+  &::before {
+    content: '';
     position: absolute;
-    bottom: 40px;
-    left: 40px;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-name: wobble;
-    animation-timing-function: ease-in-out;
+    inset: 0;
+    background: radial-gradient(circle at 18% 30%, rgba(90, 32, 166, 0.22) 0%, transparent 52%),
+      radial-gradient(circle at 82% 22%, rgba(77, 123, 255, 0.2) 0%, transparent 55%),
+      linear-gradient(190deg, rgba(7, 4, 17, 0.7) 0%, rgba(10, 6, 22, 0.68) 55%, rgba(5, 3, 12, 0.82) 100%);
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
   }
 }
 
-.scroll-indicator::before {
-  animation: bounce 1s ease infinite;
-  bottom: 2rem;
-  color: #fff;
-  content: '╲╱';
-  font-size: 1rem;
-  height: 4rem;
-  left: 50%;
-  letter-spacing: -1px;
-  line-height: 4rem;
-  margin-left: -3rem;
-  opacity: 0.8;
-  position: absolute;
+.heroReady {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.heroContent {
+  display: grid;
+  gap: clamp(1rem, 3vw, 1.5rem);
   text-align: center;
-  width: 6rem;
+  align-items: center;
+  justify-items: center;
 }
 
-@keyframes bounce {
-  50% {
-    transform: translateY(-10%);
-  }
+.heroHead {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: clamp(4rem, 12vw, 8rem);
+  letter-spacing: clamp(0.25rem, 1vw, 0.45rem);
+  text-transform: uppercase;
+  line-height: 0.9;
+  color: $text-ink;
 }
 
-@keyframes wobble {
-  30%,
-  70% {
-    transform: rotate(0deg);
-  }
+.heroSub {
+  max-width: min(700px, 90vw);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(0.85rem, 2.2vw, 1.05rem);
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(244, 242, 255, 0.78);
+}
 
-  35%,
-  65% {
-    transform: rotate(10deg);
-    color: $lightest;
-  }
-
-  40%,
-  60% {
-    transform: rotate(-10deg);
-  }
-
-  45%,
-  55% {
-    transform: rotate(10deg);
-  }
-
-  50% {
-    transform: rotate(-10deg);
+@media (max-width: 900px) {
+  .hero {
+    padding: clamp(3rem, 16vh, 6rem) clamp(1.25rem, 7vw, 3rem);
   }
 }
 
-.is {
-  height: 240vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  .caption {
-    color: white;
-    width: 100%;
-    height: 80vh;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 290vw auto;
-
-    @media (min-width: 550px) {
-      background-size: 250vw auto;
-    }
-    @media (min-width: 750px) {
-      background-size: 200vw auto;
-    }
-    @media (min-width: 900px) {
-      background-size: 100vw auto;
-    }
-
-    .captionHead {
-      text-transform: uppercase;
-      font-size: 7rem;
-      font-family: 'Six Caps', sans-serif;
-      letter-spacing: 10px;
-    }
-    .captionSub {
-      font-family: 'Merriweather', serif;
-      margin-top: 20px;
-      font-size: 1.3rem;
-    }
-  }
-
-  @media (max-width: 650px) {
-    .caption {
-      .captionHead {
-        font-size: 5rem;
-      }
-      .captionSub {
-        font-size: 1rem;
-        padding: 0 2em;
-      }
-    }
-  }
-}
-
-.scrollIndicator::before {
-  animation: bounce 1s ease infinite;
-  bottom: 2rem;
-  color: #fff;
-  content: '╲╱';
-  font-size: 1rem;
-  height: 4rem;
-  left: 50%;
-  letter-spacing: -1px;
-  line-height: 4rem;
-  margin-left: -3rem;
-  opacity: 0.8;
-  position: absolute;
-  text-align: center;
-  width: 6rem;
-}
-
-@keyframes bounce {
-  50% {
-    transform: translateY(-10%);
+@media (max-width: 520px) {
+  .heroSub {
+    letter-spacing: 0.18em;
   }
 }
