@@ -9,11 +9,11 @@ const EklavyaProjects = () => {
   const [selectedYear, setSelectedYear] = useState(null);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const years = EklavyaProjectList.map(yearData => yearData.year).reverse();
+  const years = EklavyaProjectList.map((yearData) => yearData.year).reverse();
 
   const handleYearSelect = (year) => {
     setSelectedYear(year);
-    setSelectedProject(null); 
+    setSelectedProject(null);
   };
 
   const handleProjectSelect = (project) => {
@@ -24,7 +24,9 @@ const EklavyaProjects = () => {
     setSelectedProject(null);
   };
 
-  const selectedYearData = EklavyaProjectList.find(data => data.year === selectedYear);
+  const selectedYearData = EklavyaProjectList.find(
+    (data) => data.year === selectedYear
+  );
 
   return (
     <>
@@ -34,7 +36,7 @@ const EklavyaProjects = () => {
         subtitleList={['Learning through Innovation']}
         isHome={false}
       />
-      
+
       <div className={styles.container}>
         {!selectedYear ? (
           // year view
@@ -42,10 +44,11 @@ const EklavyaProjects = () => {
             <div className={styles.header}>
               <h2 className={styles.sectionTitle}>Select Year</h2>
               <p className={styles.sectionDescription}>
-                Choose a year to explore the innovative projects developed during Eklavya
+                Choose a year to explore the innovative projects developed
+                during Eklavya
               </p>
             </div>
-            
+
             <div className={styles.yearGrid}>
               {years.map((year) => (
                 <div
@@ -55,7 +58,11 @@ const EklavyaProjects = () => {
                 >
                   <div className={styles.yearNumber}>{year}</div>
                   <div className={styles.yearProjects}>
-                    {EklavyaProjectList.find(data => data.year === year)?.projects.length} Projects
+                    {
+                      EklavyaProjectList.find((data) => data.year === year)
+                        ?.projects.length
+                    }{' '}
+                    Projects
                   </div>
                   <div className={styles.yearArrow}>→</div>
                 </div>
@@ -66,15 +73,18 @@ const EklavyaProjects = () => {
           // projects of the selected year
           <div className={styles.projectsView}>
             <div className={styles.header}>
-              <button 
-                className={styles.backButton} 
+              <button
+                className={styles.backButton}
                 onClick={() => setSelectedYear(null)}
               >
                 ← Back to Years
               </button>
-              <h2 className={styles.sectionTitle}>Eklavya {selectedYear} Projects</h2>
+              <h2 className={styles.sectionTitle}>
+                Eklavya {selectedYear} Projects
+              </h2>
               <p className={styles.sectionDescription}>
-                {selectedYearData?.projects.length} innovative projects from {selectedYear}
+                {selectedYearData?.projects.length} innovative projects from{' '}
+                {selectedYear}
               </p>
             </div>
 
@@ -87,25 +97,27 @@ const EklavyaProjects = () => {
                     onClick={() => handleProjectSelect(project)}
                   >
                     <div className={styles.projectImage}>
-                      <img 
-                        src={`/static/images/${project.imgName}`} 
+                      <img
+                        src={`/static/images/${project.imgName}`}
                         alt={project.name}
                         onError={(e) => {
                           e.target.style.display = 'none';
                           e.target.nextSibling.style.display = 'flex';
                         }}
                       />
-                      <div className={styles.projectImageFallback} style={{display: 'none'}}>
+                      <div
+                        className={styles.projectImageFallback}
+                        style={{ display: 'none' }}
+                      >
                         <span>...</span> {/* Replaced emoji */}
                       </div>
                     </div>
                     <div className={styles.projectContent}>
                       <h3 className={styles.projectTitle}>{project.name}</h3>
                       <p className={styles.projectDescription}>
-                        {project.sub.length > 100 
-                          ? `${project.sub.substring(0, 100)}...` 
-                          : project.sub
-                        }
+                        {project.sub.length > 100
+                          ? `${project.sub.substring(0, 100)}...`
+                          : project.sub}
                       </p>
                       <div className={styles.projectMeta}>
                         <span className={styles.viewMore}>View Details</span>
@@ -121,23 +133,26 @@ const EklavyaProjects = () => {
 
         {selectedProject && (
           <div className={styles.modal} onClick={handleCloseModal}>
-            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <div
+              className={styles.modalContent}
+              onClick={(e) => e.stopPropagation()}
+            >
               <button className={styles.closeButton} onClick={handleCloseModal}>
                 ×
               </button>
-              
+
               <div className={styles.modalBody}>
                 <div className={styles.modalLeft}>
                   <h2 className={styles.modalTitle}>{selectedProject.name}</h2>
                   <div className={styles.modalDescription}>
                     {selectedProject.sub}
                   </div>
-                  
+
                   <div className={styles.modalLinks}>
-                    <a 
-                      href={selectedProject.githubLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
+                    <a
+                      href={selectedProject.githubLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
                       className={styles.githubLink}
                     >
                       <FontAwesomeIcon icon={faGithub} />
@@ -152,23 +167,26 @@ const EklavyaProjects = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className={styles.modalRight}>
                   <div className={styles.modalImage}>
-                    <img 
-                      src={`/static/images/${selectedProject.imgName}`} 
+                    <img
+                      src={`/static/images/${selectedProject.imgName}`}
                       alt={selectedProject.name}
                       onError={(e) => {
                         e.target.style.display = 'none';
                         e.target.nextSibling.style.display = 'flex';
                       }}
                     />
-                    <div className={styles.modalImageFallback} style={{display: 'none'}}>
+                    <div
+                      className={styles.modalImageFallback}
+                      style={{ display: 'none' }}
+                    >
                       <span>...</span> {/* Replaced emoji */}
                       <p>Image not available</p>
                     </div>
                   </div>
-                  
+
                   <div className={styles.projectYear}>
                     <span>Eklavya {selectedYear}</span>
                   </div>

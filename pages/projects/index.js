@@ -7,7 +7,7 @@ const ProjectSelectionPage = () => {
       <Head>
         <title>Projects | SRA VJTI</title>
       </Head>
-      <ProjectSelection />;
+      <ProjectSelection />
     </>
   );
 };
