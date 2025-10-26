@@ -19,7 +19,7 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  
+
   @media (max-width: 768px) {
     margin-bottom: 40px;
   }
@@ -35,11 +35,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  
+
   @media (max-width: 768px) {
     font-size: 2.5rem;
   }
-  
+
   @media (max-width: 480px) {
     font-size: 2rem;
   }
@@ -49,7 +49,7 @@
   font-size: 1.2rem;
   color: #aaaaaa;
   line-height: 1.6;
-  
+
   @media (max-width: 768px) {
     font-size: 1.1rem;
   }
@@ -65,25 +65,25 @@
   overflow-x: auto;
   padding: 20px 0 40px;
   scroll-behavior: smooth;
-  
+
   &::-webkit-scrollbar {
     height: 8px;
   }
-  
+
   &::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
   }
-  
+
   &::-webkit-scrollbar-thumb {
     background: #892cdc; // Changed to purple
     border-radius: 4px;
-    
+
     &:hover {
       background: #a04ef0; // Lighter purple
     }
   }
-  
+
   @media (max-width: 768px) {
     gap: 20px;
     flex-direction: column;
@@ -100,28 +100,28 @@
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
-  
+
   &:hover {
     transform: translateY(-10px) scale(1.02);
     // Changed to purple theme. RGB for #892cdc is 137, 44, 220
     border-color: rgba(137, 44, 220, 0.5);
     box-shadow: 0 20px 40px rgba(137, 44, 220, 0.2),
-                0 0 80px rgba(137, 44, 220, 0.1);
-    
+      0 0 80px rgba(137, 44, 220, 0.1);
+
     .projectTitle {
       color: #892cdc; // Changed to purple
     }
-    
+
     .projectArrow {
       transform: translateX(10px);
       color: #892cdc; // Changed to purple
     }
-    
+
     .projectImage img {
       transform: scale(1.05);
     }
   }
-  
+
   @media (max-width: 768px) {
     min-width: 100%;
   }
@@ -131,7 +131,7 @@
   position: relative;
   height: 250px;
   overflow: hidden;
-  
+
   img {
     width: 100%;
     height: 100%;
@@ -140,7 +140,8 @@
   }
 }
 
-.projectImageFallback, .modalImageFallback {
+.projectImageFallback,
+.modalImageFallback {
   width: 100%;
   height: 100%;
   display: flex;
@@ -149,12 +150,12 @@
   justify-content: center;
   background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
   color: #666666;
-  
+
   span {
     font-size: 2rem;
     margin-bottom: 10px;
   }
-  
+
   p {
     font-size: 0.9rem;
     color: #888888;
@@ -233,13 +234,13 @@
   border-radius: 15px;
   overflow: hidden;
   background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
-  
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
   @media (max-width: 768px) {
     height: 250px;
   }
@@ -252,7 +253,7 @@
   overflow: hidden;
   background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  
+
   @media (max-width: 768px) {
     height: 250px;
   }
@@ -272,7 +273,7 @@
   background: rgba(137, 44, 220, 0.2);
   border: 1px solid rgba(137, 44, 220, 0.3);
   border-radius: 10px;
-  
+
   span {
     font-size: 1.1rem;
     font-weight: 600;
@@ -286,12 +287,12 @@
     margin: 10px;
     border-radius: 15px;
   }
-  
+
   .modalBody {
     padding: 25px 15px;
     gap: 25px;
   }
-  
+
   .closeButton {
     top: 15px;
     right: 15px;
@@ -326,15 +327,15 @@
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  
+
   &::-webkit-scrollbar {
     width: 8px;
   }
-  
+
   &::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.1);
   }
-  
+
   &::-webkit-scrollbar-thumb {
     background: #892cdc; // Changed to purple
     border-radius: 4px;
@@ -358,7 +359,7 @@
   justify-content: center;
   transition: all 0.3s ease;
   z-index: 10;
-  
+
   &:hover {
     background: rgba(137, 44, 220, 0.2); // Changed to purple
     transform: scale(1.1);
@@ -370,7 +371,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   padding: 40px;
-  
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -390,7 +391,7 @@
   color: #ffffff;
   margin-bottom: 25px;
   line-height: 1.2;
-  
+
   @media (max-width: 768px) {
     font-size: 1.8rem;
   }
@@ -402,7 +403,7 @@
   line-height: 1.7;
   margin-bottom: 30px;
   flex-grow: 1;
-  
+
   @media (max-width: 768px) {
     font-size: 1rem;
     margin-bottom: 25px;
@@ -424,13 +425,13 @@
   border-radius: 25px;
   font-weight: 600;
   transition: all 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(137, 44, 220, 0.3); // Changed to purple
     color: white;
   }
-  
+
   svg {
     font-size: 1.2rem;
   }

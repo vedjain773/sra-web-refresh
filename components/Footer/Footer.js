@@ -80,8 +80,10 @@ function Footer() {
             </a>
           </div>
           <div className={styles.motto}>
-            Ideate<br />
-            Innovate<br />
+            Ideate
+            <br />
+            Innovate
+            <br />
             Inspire
           </div>
         </div>
