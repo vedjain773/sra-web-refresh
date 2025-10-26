@@ -22,57 +22,68 @@ function Footer() {
   return (
     <>
       <footer className={styles.footer}>
-        <h3>Connect with us</h3>
-        <div className={styles.footerIcons}>
-          <a
-            href={SocialMediaLinks.github}
-            target='_blank'
-            style={{ display: isLoad }}
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-          <a
-            href={SocialMediaLinks.linkedin}
-            target='_blank'
-            style={{ display: isLoad }}
-          >
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </a>
-          <a
-            href={SocialMediaLinks.facebook}
-            target='_blank'
-            style={{ display: isLoad }}
-          >
-            <FontAwesomeIcon icon={faFacebook} />
-          </a>
-          <a
-            href={SocialMediaLinks.youtube}
-            target='_blank'
-            style={{ display: isLoad }}
-          >
-            <FontAwesomeIcon icon={faYoutube} />
-          </a>
-          <a
-            href={SocialMediaLinks.twitter}
-            target='_blank'
-            style={{ display: isLoad }}
-          >
-            <FontAwesomeIcon icon={faTwitter} />
-          </a>
-          <a
-            href={SocialMediaLinks.instagram}
-            target='_blank'
-            style={{ display: isLoad }}
-          >
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
-          <a
-            href={SocialMediaLinks.email}
-            target='_blank'
-            style={{ display: isLoad }}
-          >
-            <FontAwesomeIcon icon={faEnvelope} />
-          </a>
+        <div className={styles.cont}>
+          <img
+            className={styles.sraLogo}
+            src={'/static/images/SRA_logo.png'}
+            alt=''
+          />
+          <div className={styles.footerIcons}>
+            <a
+              href={SocialMediaLinks.github}
+              target='_blank'
+              style={{ display: isLoad }}
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a
+              href={SocialMediaLinks.linkedin}
+              target='_blank'
+              style={{ display: isLoad }}
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
+            <a
+              href={SocialMediaLinks.facebook}
+              target='_blank'
+              style={{ display: isLoad }}
+            >
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a
+              href={SocialMediaLinks.youtube}
+              target='_blank'
+              style={{ display: isLoad }}
+            >
+              <FontAwesomeIcon icon={faYoutube} />
+            </a>
+            <a
+              href={SocialMediaLinks.twitter}
+              target='_blank'
+              style={{ display: isLoad }}
+            >
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+            <a
+              href={SocialMediaLinks.instagram}
+              target='_blank'
+              style={{ display: isLoad }}
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a
+              href={SocialMediaLinks.email}
+              target='_blank'
+              style={{ display: isLoad }}
+            >
+              <FontAwesomeIcon icon={faEnvelope} />
+            </a>
+          </div>
+          <div className={styles.motto}>
+            Ideate<br />
+            Innovate<br />
+            Inspire
+          </div>
         </div>
       </footer>
     </>
