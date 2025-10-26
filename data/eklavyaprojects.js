@@ -1,5 +1,112 @@
 const EklavyaProjectList = [
   {
+    year: '2025',
+    projects: [
+      {
+        name: 'Autoport',
+        imgName: '',
+        sub: 'Autoport is a ROS 2-powered mobile robot designed for autonomous exploration, mapping, and navigation using Simultaneous Localization and Mapping (SLAM). Built on affordable hardware like the Raspberry Pi and common sensors, Autoport serves as a platform for robotics research, education, and prototyping.',
+        githubLink: 'https://github.com/f0rgotteng0d/autoport',
+      },
+      {
+        name: 'Ballerina Cappucina',
+        imgName: '',
+        sub: 'Ballerina-Cappucina is an omnidirectional robot designed to autonomously glide across the floor and collect scattered colorful balls. The robot leverages a combination of ESP32, ROS, and OpenCV to detect specific colored objects, navigate to them, and secure them using a custom-designed collection mechanism.',
+        githubLink: 'https://github.com/vedantmalkar/Ballerina-Cappucina',
+      },
+      {
+        name: 'CustomBoot-32',
+        imgName: '',
+        sub: 'The project focuses on creating a custom PCB that integrates both Blue Pill (STM32F103C8T6) with ESP32 WROOM-32E micro-controllers. The final goal is making a custom PCB that hosts a web server online to receive two firmwares wirelessly and execute them according to user input via a Dual-Image Bootloader.',
+        githubLink: 'https://github.com/avm1234567/Customboot-32',
+      },
+      {
+        name: 'Echocore',
+        imgName: '',
+        sub: 'This project combines two advanced real-world FPGA applications on a single platform: B-mode ultrasound imaging and 16-QAM digital communication. It involves building Verilog modules for both applications and simulate/test them using Vivado/ISE and ModelSim. Ultrasound signal processing includes beamforming, quadrature demodulation, envelope detection, and log compression.',
+        githubLink: 'https://github.com/cupx0j0e/EchoCore',
+      },
+      {
+        name: 'T5-Grammarator',
+        imgName: '',
+        sub: 'This project focuses on fine-tuning a transformer model: T5 (Text-to-Text Transfer Transformer) to perform Grammar Error Correction (GEC). The end goal being the model modifying grammatically incorrect sentences into their correct forms.',
+        githubLink: 'https://github.com/sarayusapa/t5_grammarator',
+      },
+      {
+        name: 'Handheld-Gaming-Console',
+        imgName: '',
+        sub: 'This project focuses on the design and development of a Custom STM32-based Board that runs simple games on an LCD display, with various peripherals such as IMU, DF-Player Mini, Buttons, Joystick and a Power System. Together, these elements form a compact and functional device that embodies the core aspects of embedded systems design.',
+        githubLink: 'https://github.com/Paarth-Shirsat/Handheld-Gaming-Console',
+      },
+      {
+        name: 'Quadmove',
+        imgName: '',
+        sub: 'This project focuses on simulating and training Unitree\’s Go2 to walk in MuJoCo using PPO and reward engineering.',
+        githubLink: 'https://github.com/Advait2211/quad_move_eklavya',
+      },
+      {
+        name: 'NovaPI',
+        imgName: '',
+        sub: 'This project focuses on building a lightweight bare-metal operating system for the Raspberry Pi 4B from scratch. The system provides a hardware abstraction layer with support for essential components such as communication protocols, interrupt controllers, and HDMI output. To demonstrate its capabilities, the project will feature a simple Pong game rendered over HDMI, fully powered by the custom kernel.',
+        githubLink: 'https://github.com/dark-knightshanks/NovaPi'
+      },
+      {
+        name: 'RC Ornithopter',
+        imgName: '',
+        sub: 'The project is about building a remote-controlled ornithopter — a bio-inspired flying machine that generates both lift and thrust by flapping its wings, like birds and bats, instead of using propellers.',
+        githubLink: 'https://github.com/MAX090706/RC-ORNITHOPTER.git',
+      },
+      {
+        name: 'Robot Learning',
+        imgName: '',
+        sub: 'The project aims to develop robust robot control policies by applying advanced reinforcement learning techniques, with Proximal Policy Optimization (PPO) serving as a baseline and Flow Policy Optimization (FPO) investigated as a novel alternative.The core objective is to train these policies efficiently in a fast, GPU-parallelized simulation environment and then deploy them to physical robots with zero-shot generalization—meaning they can perform real-world tasks without any additional real-world data or fine-tuning.',
+        githubLink: 'https://github.com/vruga/lerobot-sim2real',
+      },
+      {
+        name: 'Rubiknet',
+        imgName: '',
+        sub: 'This project focuses on building a Deep Reinforcement Learning (DRL)-based agent capable of solving a Rubik’s Cube using a robotic apparatus. The system combines simulation-based training with real-world execution by controlling a stepper-motor-driven cube manipulator, bridging the gap between virtual learning and physical actuation.',
+        githubLink: 'https://github.com/Archaive16/RubikNet',
+      },
+      {
+        name: 'Synapse32',
+        imgName: '',
+        sub: 'This project focuses on designing, implementing, and verifying a comprehensive instruction cache subsystem for an existing RISC-V pipelined CPU core. The end goal was to enhance processor performance by adding three different cache architectures—direct-mapped, N-way set associative, and N-way set associative with multi-word blocks—reducing memory-access latency through intelligent caching strategies.',
+        githubLink: 'https://github.com/shashvatprabhu/SynapseCache',
+      },
+      {
+        name: 'FPGA Based Tetris',
+        imgName: '',
+        sub: 'This project implements the classic game Tetris entirely in hardware on an FPGA. All functions—block falling, collision detection, video output, and memory handling—are written in Verilog HDL, with no external CPU.',
+        githubLink: 'https://github.com/Harshit6-b/SRA-FPGA-based-tetris',
+      },
+      {
+        name: 'Gantry',
+        imgName: '',
+        sub: 'An advanced automated gantry system designed for precision screwing and unscrewing of miniature screws on delicate LED panels with sub-millimeter accuracy and high-speed operation.',
+        githubLink: 'https://github.com/av-codes-lgtm/Eklavya_Gantry',
+      },
+      {
+        name: 'Stewart-Platform',
+        imgName: '',
+        sub: 'This project implements a 3-DOF Stewart Platform, a parallel manipulator capable of motion in pitch, roll, and vertical heave. It is designed as a ball-balancing control system, where a ball placed on the platform is stabilized at the center using a 6×6 IR sensor grid and a PID-based feedback loop.',
+        githubLink: 'https://github.com/Siddharth-33/Stewart-Platform.git',
+      },
+      {
+        name: 'ESP32 Flight Controller',
+        imgName: '',
+        sub: 'This project builds a quadcopter and its flight controller (using esp32) from scratch the end goal being having the quadcopter fly.',
+        githubLink: '',
+      },
+      {
+        name: 'Re:fine',
+        imgName: '',
+        sub: 'Re:Fine is an Eklavya 2025 project focused on improving large language model (LLM) alignment and productivity. It combines synthetic data, rule-based evaluation (RULER), and GRPO optimization to align LLMs with targeted behaviors such as style transfer, tone control, and reasoning.',
+        githubLink: ''
+      }
+    ]
+  },
+  {
     year: '2024',
     projects: [
       {
